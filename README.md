@@ -16,13 +16,15 @@ Base OS: Raspbian OS full (Linux raspberrypi 5.10.17+ #1403 Mon Feb 22 11:26:13 
 
 ### Install BCM2835 libraries
 In a terminal, execute the following:
-`wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.60.tar.gz`
-`tar zxvf bcm2835-1.60.tar.gz` 
-`cd bcm2835-1.60/`
-`sudo ./configure`
-`sudo make`
-`sudo make check`
-`sudo make install`
+```
+wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.60.tar.gz
+tar zxvf bcm2835-1.60.tar.gz
+cd bcm2835-1.60/
+sudo ./configure
+sudo make
+sudo make check
+sudo make install
+```
 
 ### Install wiringPI
 In a terminal, execute the following:
@@ -30,12 +32,14 @@ In a terminal, execute the following:
 
 ### Install the python libraries (python3)
 In a terminal, execute the follwing:
-`sudo apt-get update`
-`sudo apt-get install python3-pip`
-`sudo apt-get install python3-pil`
-`sudo apt-get install python3-numpy`
-`sudo pip3 install RPi.GPIO`
-`sudo pip3 install spidev`
+```
+sudo apt-get update
+sudo apt-get install python3-pip
+sudo apt-get install python3-pil
+sudo apt-get install python3-numpy
+sudo pip3 install RPi.GPIO
+sudo pip3 install spidev
+```
 
 ## How to run it
 1. Clone the repo to your Raspberry PI
