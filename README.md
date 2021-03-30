@@ -41,7 +41,17 @@ sudo pip3 install RPi.GPIO
 sudo pip3 install spidev
 ```
 
+### Copy in the library
+In a separate folder, clone the example project repo from waveshare: `git clone https://github.com/waveshare/e-Paper`
+Copy the `pic` and the `lib` folder from `e-Paper/RaspberryPi_JetsonNano/python`over to the root of your project folder
+
 ## How to run it
 1. Clone the repo to your Raspberry PI
-2. Open a terminal and navigate into the main folder of the project (where main.py is)
-3. Run `python3 main.py`
+2. Open a terminal and navigate into the root folder of the project (where main.py is)
+3. Run `sudo python3 main.py`
+
+## How to change the weather station
+In this project I am fetching the data of the weather station in my garden. If you want to change the station, you simply have to change the station code in the URL within the python file.
+Currently, it looks like this:
+`https://api.weather.com/v2/pws/observations/current?stationId=ITALHE7&format=json&units=m&apiKey=6532d6454b8aa370768e63d6ba5a832e`
+The station code within this URL is "ITALHE7". Simply replace this with the station code of the weather station you want to be displayed. 
