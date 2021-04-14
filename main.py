@@ -219,9 +219,10 @@ try:
             # Wind
             draw.text((158, 127), str(data["observations"][0]["metric"]["windSpeed"]), font = font24, fill = 0)
             draw.text((158, 152), "km/h", font = font8, fill = 0)
-            draw.text((220, 141), convert_w_dir(int(data["observations"][0]["winddir"])), font = font12, fill = 0)
+            
             bmp = Image.open(os.path.join(picdir, 'arr.bmp'))
             Himage.paste(bmp.rotate(get_graphic_rotation(convert_w_dir(int(data["observations"][0]["winddir"]))), Image.NEAREST, expand = 1, fillcolor = (255,255,255)), (190,132))
+            draw.text((230, 145), convert_w_dir(int(data["observations"][0]["winddir"])), font = font12, fill = 0)
         
         epd.display(epd.getbuffer(Himage))
         
