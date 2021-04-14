@@ -9,6 +9,8 @@ import sys
 import os
 picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'gfx')
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'lib')
+progdir = os.path.dirname(os.path.realpath(__file__))
+
 if os.path.exists(libdir):
     sys.path.append(libdir)
 
@@ -144,7 +146,7 @@ try:
     font12 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 12)
     
     # init the API path
-    api_file = open("api_path.txt")
+    api_file = open(os.path.join(progdir, "api_path.txt"))
     api_path = api_file.read().replace("\n", "")
     api_file.close()
     
@@ -157,7 +159,7 @@ try:
         
         # retrieve
         if data_source == 't':  # use test data
-            file = open("test_data.txt")
+            file = open(os.path.join(progdir, "test_data.txt"))
             data = literal_eval(file.read().replace("\n", ""))
             file.close()
         else:   # use live data
