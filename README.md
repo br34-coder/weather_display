@@ -50,8 +50,13 @@ Copy the `pic` and the `lib` folder from `e-Paper/RaspberryPi_JetsonNano/python`
 2. Open a terminal and navigate into the root folder of the project (where main.py is)
 3. Run `sudo python3 main.py`
 
+List of arguments:
+- `--help` for list of arguments
+- `--test` for using test data instead of real data from the API
+- `--text` for using text-based output rather than graphical output
+
 ## How to change the weather station
-In this project I am fetching the data of the weather station in my garden. If you want to change the station, you simply have to change the station code in the URL within the python file.
+In this project I am fetching the data of the weather station in my garden. If you want to change the station, you simply have to change the station code in the URL within the `api_path.txt` file.
 Currently, it looks like this:
 `https://api.weather.com/v2/pws/observations/current?stationId=ITALHE7&format=json&units=m&apiKey=6532d6454b8aa370768e63d6ba5a832e`
 The station code within this URL is "ITALHE7". Simply replace this with the station code of the weather station you want to be displayed. 
